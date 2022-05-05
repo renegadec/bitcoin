@@ -1,9 +1,9 @@
 import sys
 sys.path.append('/Users/renegadeconfidence/workspace/bitcoin')
 
-from blockchain.backend.core.block import Block
-from blockchain.backend.core.blockheader import BlockHeader
-from blockchain.backend.util.util import hash256
+from Blockchain.Backend.core.block import Block
+from Blockchain.Backend.core.blockheader import BlockHeader
+from Blockchain.Backend.util.util import hash256
 import time
 
 ZERO_HASH = '0' * 64
@@ -27,6 +27,7 @@ class Blockchain:
         blockheader = BlockHeader(VERSION, prevBlockHash, merkleRoot, timestamp, bits)
         blockheader.mine()
         self.chain.append(Block(BlockHeight, 1, blockheader, 1, Transaction))
+        print(self.chain)
 
 if __name__ == "__main__":
     blockchain = Blockchain()

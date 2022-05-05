@@ -8,4 +8,4 @@ class Block:
         self.Blocksize = Blocksize
         self.BlockHeader = BlockHeader
         self.TxCount = TxCount
-        self.Txs - Txs
+        self.Txs = Txs
